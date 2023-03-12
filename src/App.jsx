@@ -27,7 +27,7 @@ const App = () => {
 
   function allNewDice() {
     const newDice = [];
-    for (const _ of Array(10)) {
+    for (let i = 0; i < 10; i++) {
       newDice.push(generateNewDie());
     }
     return newDice;
