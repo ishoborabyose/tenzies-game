@@ -17,29 +17,29 @@ const App = () => {
     }
   }, [dice]);
 
-  // function generateNewDie() {
-  //   return {
-  //     value: Math.ceil(Math.random() * 6),
-  //     isHeld: false,
-  //     id: nanoid(),
-  //   };
-  // }
+  function generateNewDie() {
+    return {
+      value: Math.ceil(Math.random() * 6),
+      isHeld: false,
+      id: nanoid(),
+    };
+  }
 
-  const generateNewDie = () => ({
-    value: Math.ceil(Math.random() * 6),
-    isHeld: false,
-    id: nanoid(),
-  });
+  // const generateNewDie = () => ({
+  //   value: Math.ceil(Math.random() * 6),
+  //   isHeld: false,
+  //   id: nanoid(),
+  // });
 
-  // function allNewDice() {
-  //   const newDice = [];
-  //   for (let i = 0; i < 10; i++) {
-  //     newDice.push(generateNewDie());
-  //   }
-  //   return newDice;
-  // }
+  function allNewDice() {
+    const newDice = [];
+    for (let i = 0; i < 10; i++) {
+      newDice.push(generateNewDie());
+    }
+    return newDice;
+  }
 
-  const allNewDice = () => Array.from({ length: 10 }, generateNewDie);
+  // const allNewDice = () => Array.from({ length: 10 }, generateNewDie);
 
   const rollDice = () => {
     if (!tenzies) {
