@@ -25,21 +25,13 @@ const App = () => {
     };
   }
 
-  // const generateNewDie = () => ({
-  //   value: Math.ceil(Math.random() * 6),
-  //   isHeld: false,
-  //   id: nanoid(),
-  // });
-
   function allNewDice() {
     const newDice = [];
-    for (let i = 0; i < 10; i++) {
+    for (const _ of Array(10)) {
       newDice.push(generateNewDie());
     }
     return newDice;
   }
-
-  // const allNewDice = () => Array.from({ length: 10 }, generateNewDie);
 
   const rollDice = () => {
     if (!tenzies) {
